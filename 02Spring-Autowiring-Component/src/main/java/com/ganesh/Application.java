@@ -2,10 +2,11 @@ package com.ganesh;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.ganesh.beans.PhotoGrapher;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan("com.ganesh.beans")
 public class Application {
 
 	public static void main(String[] args) {
@@ -16,8 +17,13 @@ public class Application {
 		//problem.showData();
 		
 		/* Tight Coupling Solution */
-		TightCouplingSolution solution = new TightCouplingSolution(new PhotoGrapher());
-		solution.showData();
+		//TightCouplingSolution solution = new TightCouplingSolution(new PhotoGrapher());
+		//solution.showData();
+		
+		ApplicationContext context = SpringApplication.run(Application.class, args);
+		JobType jobType = context.getBean(Doctor.class);
+		jobType.doJob();
+		
 	}
 
 }

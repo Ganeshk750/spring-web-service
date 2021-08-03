@@ -1,8 +1,6 @@
-package com.ganesh.beans;
+package com.ganesh;
 
 import org.springframework.stereotype.Component;
-
-import com.ganesh.JobType;
 
 @Component
 public class Doctor implements JobType {

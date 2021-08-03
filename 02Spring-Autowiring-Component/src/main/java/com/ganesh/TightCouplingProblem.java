@@ -1,8 +1,5 @@
 package com.ganesh;
 
-import com.ganesh.beans.Doctor;
-import com.ganesh.beans.Engineer;
-
 public class TightCouplingProblem {
 	
 	Doctor doctor;
