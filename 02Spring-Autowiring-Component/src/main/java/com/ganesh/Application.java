@@ -3,6 +3,8 @@ package com.ganesh;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.ganesh.beans.PhotoGrapher;
+
 @SpringBootApplication
 public class Application {
 

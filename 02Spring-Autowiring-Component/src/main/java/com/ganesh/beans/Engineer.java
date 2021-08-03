@@ -1,4 +1,6 @@
-package com.ganesh;
+package com.ganesh.beans;
+
+import com.ganesh.JobType;
 
 public class Engineer implements JobType{
 
